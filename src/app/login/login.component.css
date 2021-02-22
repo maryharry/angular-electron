@@ -1,0 +1,167 @@
+.social-media {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+}
+
+.social-media i {
+    margin: 0px 5px;
+    color: orchid;
+    transition: all .2s;
+}
+
+.social-media i:hover {
+    color: rgb(152, 198, 251);
+    transform: scale(1.4);
+}
+
+.container-login {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #9053c7;
+    background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: linear-gradient( -135deg, #c850c0, #4158d0);
+}
+
+.wrap-login100 {
+    width: 960px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 177px 130px 33px 95px;
+}
+
+.title-login-sec {
+    font-family: inherit;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px 10px;
+    font-weight: 200;
+}
+
+.log-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.log-right {
+    background-color: #fff;
+    height: 100%;
+    border-radius: 0px 10px 10px 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* form {border: 3px solid #f1f1f1;} */
+
+input[type=email],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px !important;
+    width: 100%;
+    outline: none;
+    transition: all .2s;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px !important;
+    width: 100%;
+    outline: none;
+    transition: all .2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    /* padding-top: 16px; */
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .log-image {
+        height: 556px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .log-image {
+        height: 556px;
+    }
+}
+
+.has-error {
+    border-color: red !important;
+}

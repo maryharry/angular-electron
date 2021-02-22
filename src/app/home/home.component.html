@@ -1,0 +1,77 @@
+<div class="body-colors">
+    <div class="container">
+        <div class="dashboard-features ">
+
+            <!--logout section--->
+            <div class="user-logout-section">
+                <div class="user-logout" (click)="logout()">
+                    <i class="fas fa-sign-out-alt "></i>
+                </div>
+                <span class="username">Hi, Johny</span>
+            </div>
+            <!---end--->
+
+            <h1 class="welcome-msg">Welcome!</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature">
+                        <a routerLink="/register">
+                            <i class="feature-icon fas fa-key fea-key"></i>
+                            <p class="feature-name">Register</p>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature">
+                        <a routerLink="/stores">
+                            <i class="feature-icon fas fa-store fea-store"></i>
+                            <p class="feature-name">Store Status</p>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature">
+                        <a routerLink="/prices">
+                            <i class="feature-icon fa fa-book-open fea-pricebook"></i>
+                            <p class="feature-name">Pricebook</p>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="feature">
+                        <a routerLink="/vendors">
+                            <i class="feature-icon fa fa-user-friends fea-uf"></i>
+                            <p class="feature-name">Vendors</p>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature">
+                        <a routerLink="/users">
+                            <i class="feature-icon fas fa-user fea-user"></i>
+                            <p class="feature-name">Users</p>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature">
+                        <a routerLink="/times">
+                            <i class="feature-icon far fa-clock fea-clock"></i>
+                            <p class="feature-name">Time clock</p>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

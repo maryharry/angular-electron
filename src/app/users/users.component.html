@@ -1,0 +1,167 @@
+<div id="main">
+    <div class="openbtn" id="openbtn" (click)="toggleSideBar($event)">☰ </div>
+    <img src="assets/img/logo.png" class="pos-logo" alt="Logo">
+    <div class=" d-flex align-items-center  pr-4">
+        <div class="logged-user">Welcome {{logged_user_email}}</div>
+        <img src="assets/img/user.jpg" alt="User image" class="logged-user-img">
+    </div>
+</div>
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-1 p-0">
+            <!-- <div class="icon-bar sidebar" #mySidebar id="mySidebar">
+                <div class="left-icons hover-icon" id="hover-icon" routerLink="/home"> <i class="icon-basic-world"></i><span class="menus" id="menus">Dashboard</span></div>
+                <div class="left-icons hover-icon"> <i class="  icon-basic-world"></i><span class="menus" id="menus1">Stores</span></div>
+                <div class="left-icons hover-icon"> <i class=" icon-basic-sheet"></i><span class="menus" id="menus2">Report</span></div>
+                <div class="left-icons hover-icon" routerLink="/users"> <i class=" icon-basic-clock"></i><span class="menus" id="menus3">Members</span></div>
+                <div class="left-icons hover-icon"> <i class=" icon-basic-world"></i><span class="menus" id="menus4">Employee</span></div>
+                <div class="left-icons hover-icon"> <i class=" icon-basic-settings"></i><span class="menus" id="menus5">Setting</span></div>
+                <div class="left-icons hover-icon" (click)="logout()"> <i class=" icon-basic-lock"></i><span class="menus" id="menus6">Logout</span></div>
+
+            </div> -->
+        </div>
+        <div class="col-md-11">
+            <!-- <ul class="nav nav-tabs center-section ">
+              
+            <li ><a data-toggle="tab" >Womans</a></li>
+            <li><a data-toggle="tab">Mans</a></li>
+            <li><a data-toggle="tab" >News in</a></li>
+            <li><a data-toggle="tab" >Sale</a></li>
+            <li><a data-toggle="tab">All</a></li>
+        </ul> -->
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs center-section" id="full-section">
+                <li class='nav-item'>
+                    <a class='nav-link active' data-toggle='tab' href='#A1'>Women</a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link ' data-toggle='tab' href='#A2'>Men</a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link ' data-toggle='tab' href='#A3'>New in</a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link ' data-toggle='tab' href='#A4'>Sale</a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link ' data-toggle='tab' href='#A5'>All</a>
+                </li>
+            </ul>
+
+            <!-- Search Bar -->
+            <form class="form-inline md-form form-sm mt-0 search-bar">
+                <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                <input class="form-control form-control-sm ml-3 w-100 pl-5" type="text" id="searchtext" name="searchtext" [(ngModel)]="searchText" (ngModelChange)="search()" placeholder="Search" aria-label="Search">
+            </form>
+            <!-- end search -->
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class='tab-pane container fade in show active' id='A1'>
+                    <div class="item-box">
+                        <div class="card product-card" *ngFor="let user of users; let i= index">
+
+                            <div class="card-body" (click)="goToProducts(user)">
+                                <div>
+                                    <img src="assets/img/user-logo.jpg" alt="" class="item-image user-image mx-auto  d-block">
+                                </div>
+                                <h4 class="user-details text-center mt-3">{{user.first_name}} {{user.last_name}} </h4>
+                                <p class="email text-center">{{user.email}}</p>
+
+                                <button class="btn btn-success w-100 mt-3">See profile</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class='tab-pane container fade' id='A2'>
+
+                    <div class="item-box">
+
+                        <div class="card product-card" *ngFor="let user of users; let i= index">
+
+                            <div class="card-body" (click)="goToProducts(user)">
+                                <div>
+                                    <img src="assets/img/user-logo.jpg" alt="" class="item-image user-image mx-auto d-block">
+                                </div>
+                                <h4 class="user-details text-center mt-3">{{user.first_name}} {{user.last_name}} </h4>
+                                <p class="email text-center">{{user.email}}</p>
+
+                                <button class="btn btn-success w-100 mt-3">See profile</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class='tab-pane container fade' id='A3'>
+
+                    <div class="item-box">
+
+                        <div class="card product-card" *ngFor="let user of users; let i= index">
+
+                            <div class="card-body" (click)="goToProducts(user)">
+                                <div>
+                                    <img src="assets/img/user-logo.jpg" alt="" class="item-image user-image mx-auto d-block">
+                                </div>
+                                <h4 class="user-details text-center mt-3">{{user.first_name}} {{user.last_name}} </h4>
+                                <p class="email text-center">{{user.email}}</p>
+
+                                <button class="btn btn-success w-100 mt-3">See profile</button>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div class='tab-pane container fade' id='A4'>
+                    <div class="item-box">
+
+                        <div class="card product-card" *ngFor="let user of users; let i= index">
+
+                            <div class="card-body" (click)="goToProducts(user)">
+                                <div>
+                                    <img src="assets/img/user-logo.jpg" alt="" class="item-image user-image mx-auto d-block">
+                                </div>
+                                <h4 class="user-details text-center mt-3">{{user.first_name}} {{user.last_name}} </h4>
+                                <p class="email text-center">{{user.email}}</p>
+
+                                <button class="btn btn-success w-100 mt-3">See profile</button>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class='tab-pane container fade' id='A5'>
+
+                    <div class="item-box">
+                        <div class="card product-card" *ngFor="let user of users; let i= index">
+
+                            <div class="card-body" (click)="goToProducts(user)">
+                                <div>
+                                    <img src="assets/img/user-logo.jpg" alt="" class="item-image user-image mx-auto d-block">
+                                </div>
+                                <h4 class="user-details text-center mt-3">{{user.first_name}} {{user.last_name}} </h4>
+                                <p class="email text-center">{{user.email}}</p>
+
+                                <button class="btn btn-success w-100 mt-3">See profile</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='tab-pane container fade' id='A6'>6</div>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+</div>

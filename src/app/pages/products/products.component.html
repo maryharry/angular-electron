@@ -1,0 +1,327 @@
+<div id="main">
+    <div class="openbtn" id="openbtn">☰ </div>
+    <img src="assets/img/logo.png" class="pos-logo d-none" alt="Logo">
+    <div class=" d-flex align-items-center  pr-4 py-2">
+        <div class="logged-user">Welcome {{login_username | titlecase}}</div>
+        <img src="assets/img/user.jpg" alt="User image" class="logged-user-img">
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1 p-0">
+            <!-- <div class="icon-bar sidebar" id="mySidebar">
+                <div class="left-icons hover-icon" id="hover-icon" routerLink="/home"> <i class="icon-basic-world"></i><span class="menus" id="menus">Dashboard</span></div>
+                <div class="left-icons hover-icon"> <i class="  icon-basic-world"></i><span class="menus" id="menus1">Stores</span></div>
+                <div class="left-icons hover-icon"> <i class=" icon-basic-sheet"></i><span class="menus" id="menus2">Report</span></div>
+                <div class="left-icons hover-icon" routerLink="/users"> <i class=" icon-basic-clock"></i><span class="menus" id="menus3">Members</span></div>
+                <div class="left-icons hover-icon"> <i class=" icon-basic-world"></i><span class="menus" id="menus4">Employee</span></div>
+                <div class="left-icons hover-icon"> <i class=" icon-basic-settings"></i><span class="menus" id="menus5">Setting</span></div>
+                <div class="left-icons hover-icon" (click)="logout()"> <i class=" icon-basic-lock"></i><span class="menus" id="menus6">Logout</span></div>
+
+            </div> -->
+        </div>
+        <div class="col-md-6">
+
+            <!-- Nav tabs -->
+            <ul class="nav  nav-tabs center-section " id="full-section">
+                <li class='nav-item'>
+                    <a class='nav-link active' data-toggle='tab' href='#A1'>Women</a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link ' data-toggle='tab' href='#A2'>Men</a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link ' data-toggle='tab' href='#A3'>New in</a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link ' data-toggle='tab' href='#A4'>Sale</a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link ' data-toggle='tab' href='#A5'>All</a>
+                </li>
+            </ul>
+
+            <!-- Search Bar -->
+            <form class="form-inline md-form form-sm mt-0 search-bar">
+                <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                <input class="form-control form-control-sm ml-3 w-100 pl-5" type="text" placeholder="Search" aria-label="Search">
+            </form>
+            <!-- end search -->
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class='tab-pane container fade in show active' id='A1'>
+                    <div class="item-box">
+                        <div class="card product-card product_card_row_{{product.id}}" *ngFor="let product of products; let i= index">
+
+                            <div class="card-body">
+                                <div class="inner-box">
+                                    <img src="{{product.productimages[0]}}" alt="" class="item-image mx-auto d-block">
+                                    <div class="tag-icon">
+                                        <i class="fa fa-tags" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="item-list">
+                                        <p class="item-name">{{product.productName}}</p>
+                                        <p class="item-name">${{product.price}}</p>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+
+                                    <select name="cars" id="cars" class="btn size_btn">
+                                        <option value="volvo">Size</option>
+                                        <option value="saab">10</option>
+                                        <option value="opel">9</option>
+                                        <option value="audi">8</option>
+                                        <option value="audi">7</option>
+                                    </select>
+
+                                    <select name="cars" id="cars" class="btn color_btn">
+                                    <option value="volvo">Color</option>
+                                    <option value="saab">Blue</option>
+                                    <option value="opel">Red</option>
+                                    <option value="audi">Black</option>
+                                    <option value="audi">White</option>
+                                    </select>
+                                </div>
+
+                                <button class="btn btn-success w-100 mt-3 addCartbtn addCartbtn{{product.id}}" (click)="addCartItem(product)">Add to Cart</button>
+
+                                <div class="counter mt-2">
+                                    <div class="btn w-25 minus_btn">-</div>
+                                    <input type="text" value="1" class="count form-input">
+                                    <div class="btn w-25 plus_btn">+</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div class='tab-pane container fade' id='A2'>
+                    <div class="item-box">
+
+                        <div class="card product-card product_card_row_{{product.id}}" *ngFor="let product of products; let i= index">
+
+                            <div class="card-body">
+                                <div class="inner-box">
+                                    <img src="{{product.productimages[0]}}" alt="" class="item-image mx-auto d-block">
+                                    <div class="tag-icon">
+                                        <i class="fa fa-tags" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="item-list">
+                                        <p class="item-name">{{product.productName}}</p>
+                                        <p class="item-name">${{product.price}}</p>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+
+                                    <select name="cars" id="cars" class="btn size_btn">
+                                        <option value="volvo">Size</option>
+                                        <option value="saab">10</option>
+                                        <option value="opel">9</option>
+                                        <option value="audi">8</option>
+                                        <option value="audi">7</option>
+                                    </select>
+
+                                    <select name="cars" id="cars" class="btn color_btn">
+                                    <option value="volvo">Color</option>
+                                    <option value="saab">Blue</option>
+                                    <option value="opel">Red</option>
+                                    <option value="audi">Black</option>
+                                    <option value="audi">White</option>
+                                    </select>
+                                </div>
+
+                                <button class="btn btn-success w-100 mt-3 addCartbtn addCartbtn{{product.id}}" (click)="addCartItem(product)">Add to Cart</button>
+
+                                <div class="counter mt-2">
+                                    <div class="btn w-25 minus_btn">-</div>
+                                    <input type="text" value="1" class="count form-input">
+                                    <div class="btn w-25 plus_btn">+</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class='tab-pane container fade' id='A3'>
+                    <div class="item-box">
+
+                        <div class="card product-card product_card_row_{{product.id}}" *ngFor="let product of products; let i= index">
+
+                            <div class="card-body">
+                                <div class="inner-box">
+                                    <img src="{{product.productimages[0]}}" alt="" class="item-image mx-auto d-block">
+                                    <div class="tag-icon">
+                                        <i class="fa fa-tags" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="item-list">
+                                        <p class="item-name">{{product.productName}}</p>
+                                        <p class="item-name">${{product.price}}</p>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+
+                                    <select name="cars" id="cars" class="btn size_btn">
+                                        <option value="volvo">Size</option>
+                                        <option value="saab">10</option>
+                                        <option value="opel">9</option>
+                                        <option value="audi">8</option>
+                                        <option value="audi">7</option>
+                                    </select>
+
+                                    <select name="cars" id="cars" class="btn color_btn">
+                                    <option value="volvo">Color</option>
+                                    <option value="saab">Blue</option>
+                                    <option value="opel">Red</option>
+                                    <option value="audi">Black</option>
+                                    <option value="audi">White</option>
+                                    </select>
+                                </div>
+
+                                <button class="btn btn-success w-100 mt-3 addCartbtn addCartbtn{{product.id}}" (click)="addCartItem(product)">Add to Cart</button>
+
+                                <div class="counter mt-2">
+                                    <div class="btn w-25 minus_btn">-</div>
+                                    <input type="text" value="1" class="count form-input">
+                                    <div class="btn w-25 plus_btn">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='tab-pane container fade' id='A4'>
+                    <div class="card product-card">
+                        <div class="card-body">
+                            <div class="inner-box">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/81A4mZpvWBL._SL1500_.jpg" alt="" class="item-image mx-auto d-block">
+                                <div class="item-list">
+                                    <p class="item-name">Shoes </p>
+                                    <p class="item-name">$170</p>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <select name="cars" id="cars" class="btn ">
+                  <option value="volvo">Size</option>
+                  <option value="saab">10</option>
+                  <option value="opel">9</option>
+                  <option value="audi">8</option>
+                  <option value="audi">7</option>
+                </select>
+
+                                <select name="cars" id="cars" class="btn ">
+                    <option value="volvo">Color</option>
+                    <option value="saab">Blue</option>
+                    <option value="opel">Red</option>
+                    <option value="audi">Black</option>
+                    <option value="audi">White</option>
+                  </select>
+                            </div>
+                            <button class="btn btn-success w-100 mt-3">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class='tab-pane container fade' id='A5'>
+                    <div class="card product-card">
+                        <div class="card-body">
+                            <div class="inner-box">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/81A4mZpvWBL._SL1500_.jpg" alt="" class="item-image mx-auto d-block">
+                                <div class="item-list">
+                                    <p class="item-name">Shoes </p>
+                                    <p class="item-name">$170</p>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <select name="cars" id="cars" class="btn ">
+                                <option value="volvo">Size</option>
+                                <option value="saab">10</option>
+                                <option value="opel">9</option>
+                                <option value="audi">8</option>
+                                <option value="audi">7</option>
+                                </select>
+
+                                <select name="cars" id="cars" class="btn ">
+                                    <option value="volvo">Color</option>
+                                    <option value="saab">Blue</option>
+                                    <option value="opel">Red</option>
+                                    <option value="audi">Black</option>
+                                    <option value="audi">White</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-success w-100 mt-3">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class='tab-pane container fade' id='A6'>6</div>
+            </div>
+
+
+
+        </div>
+
+        <div class="col-md-5">
+            <div class="right-sidebar">
+                <div class="cart-header">
+                    <!-- heading section -->
+                    <div class="cart">
+                        <div class="cart-heading d-flex">
+                            <h5>Shopping Cart <span class="cart-count">1</span> </h5>
+                            <span class="ml-auto cart-set">&hellip;</span>
+                        </div>
+                        <p class="cart-id">Customer #: 288104066</p>
+                    </div>
+                    <div class="cart-button">
+                        <a href="" class="btn-cart">Existing Customer Id</a>
+                        <a href="" class="btn-cart">Add a new customer</a>
+                    </div>
+                </div>
+                <!--Cart Items  -->
+                <div class="cart-item">
+                    <span *ngFor="let product of products; let i= index">
+                        <div class="items" *ngIf="product.quantity>0">
+                            <img src="{{product.productimages[0]}}"  alt="item-img">
+                            <div class="item-name">
+                                <span class="item-name-text" title="{{product.productName}}"> {{ (product.productName.length>20)? (product.productName | slice:0:20)+'..':(product.productName) }}</span><br><span class="item-description">Color: {{product.color}}</span></div>
+                <div class="ml-auto counter" (click)="reduceCartProductQuantity(product)">-</div>
+                <div class="item-qty  ">{{product.quantity}}</div>
+                <div class="counter" (click)="increaseCartProductQuantity(product)">+</div>
+                <div class="item-price">{{product.price|currency }}</div>
+            </div>
+            </span>
+
+        </div>
+        <!--Cart Items   -->
+
+        <!--Shopping button  -->
+        <div class="cart-button d-none">
+            <a href="" class="btn-cart">Add Discount</a>
+            <a href="" class="btn-cart">Add Shipping cost</a>
+        </div>
+        <!-- end -->
+
+        <!-- Total -->
+        <div class="total-section">
+            <div class="d-flex justify-content-between">
+                <p class="subtotal">Subtotal</p>
+                <p class="sub-price item-price">{{sub_total|currency}}</p>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <p class="tax">Tax <span class="tax-include">(VAT included)</span> </p>
+                <p class="tax-value item-price">{{tax_amount|currency}}</p>
+            </div>
+        </div>
+        <!-- total end -->
+    </div>
+    <!----sidebar div close -->
+
+
+    <!-- total submit button -->
+    <div class="total-button d-flex">
+        <div class="total">Total</div>
+        <div class="total-value ml-auto">{{final_total_amount|currency}}</div>
+    </div>
+    <!-- end -->
+</div>
+</div>
+</div>

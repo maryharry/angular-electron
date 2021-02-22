@@ -1,0 +1,9 @@
+.feature a {
+    color: unset;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+body.custom_bg_color {
+    background-color: gray !important;
+}

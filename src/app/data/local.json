@@ -1,0 +1,15 @@
+{
+    "user_list": [
+        { "id": 1, "first_name": "aman", "last_name": "raikwar", "email": "aman@mailinator.com", "status": "active" },
+        { "id": 2, "first_name": "sanjay", "last_name": "pande", "email": "pande@mailinator.com", "status": "inactive" },
+        { "id": 3, "first_name": "ravi", "last_name": "sharma", "email": "sharma@mailinator.com", "status": "pending" },
+        { "id": 4, "first_name": "dhanu", "last_name": "pakhale", "email": "daman@mailinator.com", "status": "active" },
+        { "id": 5, "first_name": "akash", "last_name": "sharma", "email": "sharma@mailinator.com", "status": "active" },
+        { "id": 6, "first_name": "rahul", "last_name": "pandit", "email": "rahul@mailinator.com", "status": "inactive" },
+        { "id": 7, "first_name": "vijay", "last_name": "barapatre", "email": "vijay@mailinator.com", "status": "pending" },
+        { "id": 8, "first_name": "anil", "last_name": "kapoor", "email": "anil@mailinator.com", "status": "active" },
+        { "id": 9, "first_name": "sanjay", "last_name": "dutt", "email": "sanjay@mailinator.com", "status": "pending" },
+        { "id": 10, "first_name": "salman", "last_name": "khan", "email": "salaman@mailinator.com", "status": "active" }
+
+    ]
+}
